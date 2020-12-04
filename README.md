@@ -17,6 +17,7 @@ See ```EDA_Emotions_Intensity.ipynb```
 	- TF-IDF (see ```approach_1```)
 	- BERT (see ```approach_2```)
 	- BERT embeddings appended with statistical features calculated using hashtag:score and anger_words:score pairs from annotated datasets ([source](https://saifmohammad.com/WebPages/AccessResource.htm)) (see ```approach_3```)
+- Best model chosen using Cross Validation and Grid Search
 
 ## Preprocessing
 
@@ -88,3 +89,8 @@ SPEARMAN(JOY):
 - Find more statistical features we can use (such as the dataset with emoticon:score pairs)
 - Find better ways to represent these statistical features
 - OOP-ify the code :)
+
+## Assumptions/Notes:
+
+- Have not used the development set, as it was explicitly mentioned that we could use the training set
+- Models trained on Google Colab
