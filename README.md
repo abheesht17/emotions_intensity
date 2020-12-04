@@ -89,6 +89,7 @@ SPEARMAN(JOY):
 - Find more statistical features we can use (such as the dataset with emoticon:score pairs)
 - Find better ways to represent these statistical features
 - OOP-ify the code :)
+- Try out Word2Vec and GloVe embeddings
 
 ## Assumptions/Notes:
 
