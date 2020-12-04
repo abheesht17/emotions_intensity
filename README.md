@@ -1,24 +1,24 @@
 ## Predicting the Intensity of Emotions
 
-#### Problem Statement and Objective
+## Problem Statement and Objective
 
 - Supervised Learning Problem (Regression Task)
 - Predict the degree of anger/joy in tweets from Twitter
 - The score is a floating point number between 0 and 1
 
-#### Exploratory Data Analysis (EDA)
+## Exploratory Data Analysis (EDA)
 
 See ```EDA_Emotions_Intensity.ipynb```
 
-### Methods
+## Methods
 - We use three models: SVM, Decision Tree, MLP
 - We try out four different embeddings using the models above:
-	- Bag of Words
-	- TF-IDF
-	- BERT
-	- BERT embeddings appended with statistical features calculated using hashtag:score and anger_words:score pairs from annotated datasets [source](https://saifmohammad.com/WebPages/AccessResource.htm)
+	- Bag of Words (see ```approach_1```)
+	- TF-IDF (see ```approach_1```)
+	- BERT (see ```approach_2```)
+	- BERT embeddings appended with statistical features calculated using hashtag:score and anger_words:score pairs from annotated datasets ([source](https://saifmohammad.com/WebPages/AccessResource.htm)) (see ```approach_3```)
 
-### Preprocessing
+## Preprocessing
 
 - Bag of Words and TF-IDF Methods
 	- Expand contractions
@@ -29,11 +29,11 @@ See ```EDA_Emotions_Intensity.ipynb```
 - BERT-Based Methods
 	- Expand contractions
 	- Remove URLs
-	- Replace emoticons with the corresponding words [source for dictionary](https://github.com/NeelShah18/emot/blob/master/emot/emo_unicode.py)
+	- Replace emoticons with the corresponding words ([source for dictionary](https://github.com/NeelShah18/emot/blob/master/emot/emo_unicode.py))
 	- StandardScaler() on the feature vectors did not give an improvement in the scores.
 
 
-### Results
+## Results
 
 PEARSON (ANGER):
 
@@ -80,7 +80,7 @@ SPEARMAN(JOY):
 
 
 
-### Future Work
+## Future Work
 
 - Try out other transformers-based models (XLNet, RoBERTa, etc.) to compute the embeddings
 - For the statistical methods (the one in which we compute the "angry words" and "hashtag" embeddings using annotated datasets), we can use PCA to reduce the dimensionality of those vectors
